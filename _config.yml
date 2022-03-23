@@ -6,7 +6,7 @@ theme: jekyll-theme-slate
 permalink: :slug
 
 social:
-  twitter: _SupunKavinda
+  twitter:
   github: S3K0NDZ
 
 plugins:

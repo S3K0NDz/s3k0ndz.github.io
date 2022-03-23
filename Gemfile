@@ -2,4 +2,4 @@
 
 source "https://rubygems.org"
 gemspec
-gem "jekyll-theme-leaf"
+gem "kramdown-parser-gfm"

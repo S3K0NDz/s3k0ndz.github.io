@@ -10,7 +10,8 @@ Prueba de post con fotos
 
 ## Algo de código en html:
 
-``html
+
+```html
 <html>
   <head>
   </head>
@@ -19,5 +20,14 @@ Prueba de post con fotos
   </body>
 </html>
 ```
+
+
+## Algo de código en python:
+
+
+```python
+print ("código en python")
+```
+
 
 

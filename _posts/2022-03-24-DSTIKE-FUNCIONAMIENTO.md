@@ -10,7 +10,6 @@ permite hacer varios tipos de ataques jugando con la redes wifi de 2.4 GHz.
 Este es el dispositivo en cuestión: 
 >
 <img src="https://ae01.alicdn.com/kf/H79491ed834ec4bed901e4931f7a6bfdbQ.jpg">
-<img src="http://drive.google.com/uc?export=view&id=1YYgLGOCGNMh-aKxsIDPr-PO6MdpPrwu4"> 
 
 
 Para empezar voy a enumerar todas las funcionalidades que tiene este reloj, y así saber exáctamente lo que podemos hacer y lo que no con este dispositivo.
@@ -32,7 +31,7 @@ pájaros de un tiro ya que así podremos escanear las diferentes APs y sus estac
 <img src="http://drive.google.com/uc?export=view&id=1-nmqjWtu0phccrTzI8ifpMreB-OjDeSR">
 
 
-### Diferentes ataques 
+### Select
 
 El segundo modo que tiene el DSTIKE es el modo **SELECT**, este modo nos permite seleccionar de manera individual las APs y las estaciones que queremos atacar.
 Además de esto tiene un modo llamado SSID que nos permite randomizar hasta 60 SSID para un ataque **Beacon**, del cual os hablaré mas adelante. 
@@ -40,6 +39,7 @@ Además de esto tiene un modo llamado SSID que nos permite randomizar hasta 60 S
 <img src="http://drive.google.com/uc?export=view&id=1QbYqTJ0FHR2vjzZCG9Lhe620hdlbXX-H">
 
 En este caso estoy seleccionando una mi red personal MOVISTAR****
+
 >
 <img src="http://drive.google.com/uc?export=view&id=1ic5j9qGRDPXVTqanDGR_3PhkbqxgIejR">
 

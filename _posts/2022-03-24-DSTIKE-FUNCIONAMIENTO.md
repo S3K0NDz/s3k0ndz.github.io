@@ -3,7 +3,7 @@ layout: post
 author: S3konDz
 title: Uso y review del reloj DSTIKE DEAUTHER mini
 ---
-Consdero que no hay una forma mas interesante de estrenar este rincóncito que tengo en internet, que compartir el fincionamiento de uno de los cacharritos
+Considero que no hay una forma mas interesante de estrenar este rincóncito que tengo en internet, que compartir el funcionamiento de uno de los cacharritos
 que mas me han llamado la ateción desde que me metí en el mundo del hacking, estoy hablando del reloj DSTIKE, un dispositivo portatil con forma de reloj que te 
 permite hacer varios tipos de ataques jugando con la redes wifi de 2.4 GHz. 
 

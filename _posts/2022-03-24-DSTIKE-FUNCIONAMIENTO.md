@@ -24,24 +24,24 @@ además de esto nos deja escanear por estaciones conectados a las diferentes APs
 
 <br> 
 <img src="http://drive.google.com/uc?export=view&id=14TWYjX1aQS1nNS8sGw9VC-U6oAqaHcQP">
-<br>
-<br>
+>
+>
 Como se puede ver en la siguiente imagen tenemos 3 tipos de escaneos distintos, mi recomendación es que siempre usemos el primero y de esta forma matamos 2
 pájaros de un tiro ya que así podremos escanear las diferentes APs y sus estaciones.
-<br>
-<br> 
+>
+> 
 <img src="http://drive.google.com/uc?export=view&id=10IJ2eT7eYzYrsutM8zb-jRvtgiwRDcBI">
 <img src="http://drive.google.com/uc?export=view&id=1-nmqjWtu0phccrTzI8ifpMreB-OjDeSR">
-<br>
+>
 
 ### Diferentes ataques 
 
 El segundo modo que tiene el DSTIKE es el modo **SELECT**, este modo nos permite seleccionar de manera individual las APs y las estaciones que queremos atacar.
 Además de esto tiene un modo llamado SSID que nos permite randomizar hasta 60 SSID para un ataque **Beacon**, del cual os hablaré mas adelante. 
-<br> 
+>
 <img src="http://drive.google.com/uc?export=view&id=1QbYqTJ0FHR2vjzZCG9Lhe620hdlbXX-H">
 En este caso estoy seleccionando una mi red personal MOVISTAR****
-<br> 
+>
 <img src="http://drive.google.com/uc?export=view&id=1ic5j9qGRDPXVTqanDGR_3PhkbqxgIejR">
 
 

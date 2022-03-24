@@ -39,7 +39,7 @@ Además de esto tiene un modo llamado SSID que nos permite randomizar hasta 60 S
 
 <img src="http://drive.google.com/uc?export=view&id=1QbYqTJ0FHR2vjzZCG9Lhe620hdlbXX-H">
 
-En este caso estoy seleccionando una mi red personal MOVISTAR****
+En este caso estoy seleccionando mi red personal MOVISTAR xxxx
 
 
 <img src="http://drive.google.com/uc?export=view&id=1ic5j9qGRDPXVTqanDGR_3PhkbqxgIejR">

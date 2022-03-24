@@ -12,7 +12,7 @@ Este es el dispositivo en cuestión:
 <img src="https://ae01.alicdn.com/kf/H79491ed834ec4bed901e4931f7a6bfdbQ.jpg">
 
 
-<img src="http://drive.google.com/uc?export=view&id=1YYgLGOCGNMh-aKxsIDPr-PO6MdpPrwu4> 
+<img src="http://drive.google.com/uc?export=view&id=1YYgLGOCGNMh-aKxsIDPr-PO6MdpPrwu4"> 
 
 
 Para empezar voy a enumerar todas las funcionalidades que tiene este reloj, y así saber exáctamente lo que podemos hacer y lo que no con este dispositivo.

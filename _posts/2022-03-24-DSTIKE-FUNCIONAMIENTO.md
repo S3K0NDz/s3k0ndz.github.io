@@ -11,6 +11,7 @@ Este es el dispositivo en cuestión:
 
 <img src="https://ae01.alicdn.com/kf/H79491ed834ec4bed901e4931f7a6bfdbQ.jpg">
 
+El reloj funciona sobre un micro **ESP8266** con módulo wifi 2.4 GHz incorporado.
 
 Para empezar voy a enumerar todas las funcionalidades que tiene este reloj, y así saber exáctamente lo que podemos hacer y lo que no con este dispositivo.
 
@@ -45,17 +46,43 @@ En este caso estoy seleccionando mi red personal MOVISTAR xxxx
 <img src="http://drive.google.com/uc?export=view&id=1ic5j9qGRDPXVTqanDGR_3PhkbqxgIejR">
 
 
-
 ### Diferentes ataques 
+
+El tercer modo que tiene el DSTIKE es el modo **Atack**, este modo nos permite hacer ataques como los siguientes: 
+
+<img src="http://drive.google.com/uc?export=view&id=12CyUSiy4H7CEHr3SeYljn5388mDZpYzS">
+
+<img src="http://drive.google.com/uc?export=view&id=1QJgGx-3SAWRLODMBqIy1XlcGxAnDZKre">
+
+#### Deauth
+
+Este ataque nos permite mandar paquetes de desautenticación a las APs o Estaciones que hayamos seleccionado previamente, haciendo que mientras este ataque esté funcionado sea imposible por parte de la víctima volverse a conectar al Wi-fi.
+
+#### Beacon
+
+Este ataque se usa para saturar la red con SSIDs que no conectan a ningún lado, en este caso el reloj permite generar hasta 60 redes para saturar todo el espectro.
+
+#### Probe
+
+Probe Spam se refiere a todas las solicitudes de sondeo que se realizan, esto hace referencia a cuando un dispositivo envía peticiones en busca de la red a la que se quiere conectar todo esto por medio del SSID y de la MAC que se tiene. Básicamente consiste en enviar peticiones de conexión.
 
 
 ### Packet monitor
 
+Este modo es un monitor de tráfico de paquetes de los 14 canales.
+
+<img src="http://drive.google.com/uc?export=view&id=1wox9lHmak5aaJFvutEo_PK9O20rWEciI">
 
 ### Reloj
 
+Como todo reloj que se precie tiene que dar la hora, este no podía ser menos, por lo que podemos ver y ajustar la hora cuando queramos.
+
+<img src="http://drive.google.com/uc?export=view&id=1GNF-NSvdXs4wVqNsR9UhKjiWtI-zwW0Z">
 
 ### Led
 
+Por último el modo mas útil de todos, una luz led por si nos quedamos sin iluminación y las cosas se ponen chungas. 
 
+<img src="http://drive.google.com/uc?export=view&id=15ZhBReXFhiuBElQqMvj9E4Hmacv7Q5aP">
 
+Un saludo a los lectores! 

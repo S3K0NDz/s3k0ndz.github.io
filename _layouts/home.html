@@ -18,7 +18,7 @@ layout: default
         {%- for post in posts -%}
           <a class="post-link" href="{{ post.url | relative_url }}">
             <h3>{{ post.title | escape }}</h3> 
-            <img src="{{ post.image }}">
+            <img src="{{ post.image }}" style="height: auto; width: auto; max-width: 300px; max-height: 300px;">
             <h4>{{ post.description }}</h4>
           </a>
         {%- endfor -%}

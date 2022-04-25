@@ -17,8 +17,18 @@ layout: default
       <div class="post-list">
         {%- for post in posts -%}
           <a class="post-link" href="{{ post.url | relative_url }}">
-            <h3>{{ post.title | escape }}</h3> 
-            <img src="{{ post.image }}" style="height: auto; width: auto; max-width: 300px; max-height: 300px;">
+            <table>
+                <th></th>
+                <tr>
+                    <td>
+                        <h3>{{ post.title }}</h3>
+                    </td>
+                    <td>
+                        <img src="{{ post.image }}" style="height: 300px; width: 300px; align: right">
+                    </td>
+                </tr>
+            </table>
+            <br>
             <h4>{{ post.description }}</h4>
           </a>
         {%- endfor -%}

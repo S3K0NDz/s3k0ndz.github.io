@@ -16,13 +16,18 @@ layout: default
     <div class="box home-box">
       <div class="post-list">
         {%- for post in posts -%}
-          <a class="post-link" href="{{ post.url | relative_url }}">
-              <div style="display: inline-block;">
-                    <h3>{{ post.title }}</h3>
-              </div>
-              <div style="display: inline-block;">
-                   <img src="{{ post.image }}" style="height: 300px; width: 300px; align: right">
-              </div>        
+          <a class="post-link" href="{{ post.url | relative_url }}">  
+              <table>
+                <th></th>
+                <tr>
+                    <td>
+                         <h3>{{ post.title }}</h3>
+                    </td>
+                    <td>
+                        <img src="{{ post.image }}" style="height: 300px; width: 300px; align: right">
+                    </td>
+                </tr>
+              </table>
               <br>
               <h4>{{ post.description }}</h4>
           </a>

@@ -1,7 +1,7 @@
 ---
 layout: post
 author: S3konDz
-title: Resolución máquina Pandora - Hack the box
+title: Resolución máquina NodeBlog - Hack the box
 ---
 ## Reconocimiento
 ## Intrusión

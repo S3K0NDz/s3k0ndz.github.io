@@ -1,6 +1,6 @@
 ---
 layout: post
-author: S3k0nDz
+author: s3k0nDz
 title: Resolución máquina NodeBlog - Hack the box
 ---
 ## Reconocimiento

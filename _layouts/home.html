@@ -17,17 +17,9 @@ layout: default
       <div class="post-list">
         {%- for post in posts -%}
           <a class="post-link" href="{{ post.url | relative_url }}">  
-              <table>
-                <th></th>
-                <tr>
-                    <td>
-                         <h3>{{ post.title }}</h3>
-                    </td>
-                    <td>
-                        <img src="{{ post.image }}" style="height: 250px; width: 250px;">
-                    </td>
-                </tr>
-              </table>
+              <h3>{{ post.title }}</h3>
+              <br>
+              <img src="{{ post.image }}" style="height: auto; width: auto; max-width: 150px; max-width: 150px;">
               <br>
               <h4>{{ post.description }}</h4>
           </a>

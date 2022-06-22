@@ -20,7 +20,7 @@ La máquina que voy a resolver hoy es Tenten, tiene una dificultad media y toca 
 Para empezar lanzamos una traza a la ip para ver si está operativa la máquina. 
 
 
-```bash
+```
 ping -c 1 10.10.10.10
 
 ---------------------------------------------------------------------------------------------
@@ -33,13 +33,13 @@ En este caso la máquina está encendida por lo que podemos pasar a la fase de e
 
 Hice una utilidad para hacer acelerar este proceso, crea una carpeta con el nombre de la máquina y genera 3 subdirectorios (data, explotation y nmap) En este último directorio tendremos el reporte que genere el reconocimiento con nmap, podéis usarla clonando el siguiente repositorio de github. 
 
-```bash
+```
 git clone https://github.com/S3K0NDZ/machine.git
 ```
 
 Al ejecutar la herramienta os pedirá el nombre de la máquina, la ip y tipo de escaneo que queréis usar, en este caso vamos a usar el completo. 
 
-```bash
+```
 Introduce el nombre de la máquina: Tenten
 Introduce la ip de la máquina: 10.10.10.10
 Selecciona tipo de escaneo: 
@@ -49,7 +49,7 @@ c) Escaneo completo
 
 Podemos ver como en el reporte que obtenemos, tenemos abiertos los puertos 22 y 80.
 
-```bash
+```
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-06-21 01:56 CEST
 Nmap scan report for 10.10.10.10
 Host is up (0.046s latency).

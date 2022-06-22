@@ -3,7 +3,7 @@ layout: post
 author: s3k0nDz
 title: Resolución máquina TenTen - Hack the box
 description: Resolución de máquina
-image: http://drive.google.com/uc?export=view&id=1RxJVk_Ot5kma3WTG_ObKUZu9kg2wgIsx
+
 ---
 La máquina que voy a resolver hoy es Tenten, tiene una dificultad media y toca las siguientes técnicas.
 

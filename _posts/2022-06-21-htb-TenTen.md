@@ -79,7 +79,12 @@ Nmap done: 1 IP address (1 host up) scanned in 16.14 seconds
 
 ## Intrusión
 
+Para la intrusión lo primero que vamos a hacer es entrar en nuestro navegador de preferencia y buscar la página que está alojada en el puerto 80. 
 
+```
+http://10.10.10.10
+```
+Y veremos la siguiente web. 
 
 ## Escalada de privilegios 
 ## Video

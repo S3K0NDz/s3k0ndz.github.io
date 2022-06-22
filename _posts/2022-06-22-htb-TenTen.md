@@ -7,13 +7,12 @@ description: Resolución de máquina
 ---
 La máquina que voy a resolver hoy es Tenten, tiene una dificultad media y toca las siguientes técnicas.
 
-<ul>
-    <li>Enumeración en WordPress</li>
-    <li>Job-Manager Wordpress Plugin [CVE-2015-6668]</li>
-    <li>Steganografía con la herramienta <b>Steghide</b></li>
-    <li>Crakeo hash usando la herramienta <b>John the Ripper</b></li>
-    <li>Escalada usando listado de privilegios de sudoers</li>
-</ul>
+* Enumeración en WordPress
+* Job-Manager Wordpress Plugin [CVE-2015-6668]
+* Steganografía con la herramienta *Steghide*
+* Crakeo hash usando la herramienta *John the Ripper*
+* Escalada usando listado de privilegios de sudoers
+
 
 ## Reconocimiento
 

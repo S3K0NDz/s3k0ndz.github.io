@@ -1,6 +1,6 @@
 ---
 layout: post
-author: S3konDz
+author: S3K0NDZ
 title: Uso y review del reloj DSTIKE DEAUTHER mini
 image: http://drive.google.com/uc?export=view&id=14TWYjX1aQS1nNS8sGw9VC-U6oAqaHcQP
 description: Review hardware hacking

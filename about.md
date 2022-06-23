@@ -3,4 +3,4 @@ title: About
 layout: page
 ---
 
-Esta página esta destinada para ser un pequeño repositorio de conocimiento acerca de lo que voy haciendo en el ámbito del hacking ético
+Esta blog lo uso a modo de repositorio de los conocimientos que voy adquiriendo acerca del hacking ético.

@@ -86,5 +86,39 @@ http://10.10.10.10
 ```
 Y veremos la siguiente web. 
 
+<img src="http://drive.google.com/uc?export=view&id=1lW4aEO2C0yltPR289OQzqHDpzeT_uB71">
+
+Si lo anazalizamos con whatweb podemos ver como la tecnología que usa es WordPress 
+
+```
+http://10.10.10.10 [200 OK] Apache[2.4.18], Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], IP[10.10.10.10], JQuery[1.12.4], MetaGenerator[WordPress 4.7.3], PoweredBy[WordPress,WordPress,], Script[text/javascript], Title[Job Portal &#8211; Just another WordPress site], UncommonHeaders[link], WordPress[4.7.3]
+```
+Una vez sabemos esto y vemos que tiene una versión desactualizada, podemos listar usuarios y plugins vulnetables con WPscan, yo en este caso voy a listar usuarios con WPSCAN y voy a enumerar plugins con gobuster fuzzeando, usando un diccionario del repositorio de SECLIST.
+
+```
+git clone https://github.com/danielmiessler/SecLists
+```
+De aquí voy a usar el diccionario de **wp-plugins.fuzz.txt** para listar plugins. 
+
+Usando la herramienta WPscan 
+
+```
+wpscan --url http://10.10.10.10 -enumerate u
+```
+He conseguido un usuario que se llama **Takis**.
+
+Ahora con gobuster aplicaré fuzzing con el diccionario nombrado anteriormente para enumerar plugins.
+
+Me llama la atención el plugin job manager, se usa en la siguiente parte de la página para enviar CV. 
+
+foto tenten3 -------------------
+
+
+, y buscando vulneravilidades por google me he topado con la siguiente. 
+
+foto tenten2 ---------------
+
+
+
 ## Escalada de privilegios 
 ## Video

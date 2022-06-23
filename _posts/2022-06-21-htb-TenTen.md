@@ -183,6 +183,104 @@ Si entramos vemos la siguiente imagen.
 
 <img src="http://drive.google.com/uc?export=view&id=1ikqnYD8Q3wbAcOAib1RvcfOTNuB66AjH">
 
+Vamos a descargarla, y vamos a empezar con la parte divertida...
+
+En primer lugar traté de extraer algún metadato relevante mediante la herramienta **Exiftool** sin éxito, lo mismo aplicando **Strings**, sin éxito, y probé por último una herramienta para esconder información en las fotos ,**Steghide** aquí si conseguí extraer nada más y nada menos que una id_rsa, con el inconveniente que venía cifrado, pero vamos a ver primero como se hace este proceso de extracción de datos...
+
+**PRIMERO - ver la información que contiene la imagen**
+```
+steghide info HackerAccessGranted.jpg 
+
+"HackerAccessGranted.jpg":
+  formato: jpeg
+  capacidad: 15,2 KB
+�Intenta informarse sobre los datos adjuntos? (s/n) s
+Anotar salvoconducto: 
+  archivo adjunto "id_rsa":
+    tama�o: 1,7 KB
+    encriptado: rijndael-128, cbc
+    compactado: si
+```
+Podemos ver que pone archivo adjunto "id_rsa"
+
+**SEGUNDO - extraer la información que contiene la imagen**
+```
+steghide extract -sf HackerAccessGranted.jpg
+```
+Y la id_rsa resultante es la siguiente
+
+```
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,7265FC656C429769E4C1EEFC618E660C
+
+/HXcUBOT3JhzblH7uF9Vh7faa76XHIdr/Ch0pDnJunjdmLS/laq1kulQ3/RF/Vax
+tjTzj/V5hBEcL5GcHv3esrODlS0jhML53lAprkpawfbvwbR+XxFIJuz7zLfd/vDo
+1KuGrCrRRsipkyae5KiqlC137bmWK9aE/4c5X2yfVTOEeODdW0rAoTzGufWtThZf
+K2ny0iTGPndD7LMdm/o5O5As+ChDYFNphV1XDgfDzHgonKMC4iES7Jk8Gz20PJsm
+SdWCazF6pIEqhI4NQrnkd8kmKqzkpfWqZDz3+g6f49GYf97aM5TQgTday2oFqoXH
+WPhK3Cm0tMGqLZA01+oNuwXS0H53t9FG7GqU31wj7nAGWBpfGodGwedYde4zlOBP
+VbNulRMKOkErv/NCiGVRcK6k5Qtdbwforh+6bMjmKE6QvMXbesZtQ0gC9SJZ3lMT
+J0IY838HQZgOsSw1jDrxuPV2DUIYFR0W3kQrDVUym0BoxOwOf/MlTxvrC2wvbHqw
+AAniuEotb9oaz/Pfau3OO/DVzYkqI99VDX/YBIxd168qqZbXsM9s/aMCdVg7TJ1g
+2gxElpV7U9kxil/RNdx5UASFpvFslmOn7CTZ6N44xiatQUHyV1NgpNCyjfEMzXMo
+6FtWaVqbGStax1iMRC198Z0cRkX2VoTvTlhQw74rSPGPMEH+OSFksXp7Se/wCDMA
+pYZASVxl6oNWQK+pAj5z4WhaBSBEr8ZVmFfykuh4lo7Tsnxa9WNoWXo6X0FSOPMk
+tNpBbPPq15+M+dSZaObad9E/MnvBfaSKlvkn4epkB7n0VkO1ssLcecfxi+bWnGPm
+KowyqU6iuF28w1J9BtowgnWrUgtlqubmk0wkf+l08ig7koMyT9KfZegR7oF92xE9
+4IWDTxfLy75o1DH0Rrm0f77D4HvNC2qQ0dYHkApd1dk4blcb71Fi5WF1B3RruygF
+2GSreByXn5g915Ya82uC3O+ST5QBeY2pT8Bk2D6Ikmt6uIlLno0Skr3v9r6JT5J7
+L0UtMgdUqf+35+cA70L/wIlP0E04U0aaGpscDg059DL88dzvIhyHg4Tlfd9xWtQS
+VxMzURTwEZ43jSxX94PLlwcxzLV6FfRVAKdbi6kACsgVeULiI+yAfPjIIyV0m1kv
+5HV/bYJvVatGtmkNuMtuK7NOH8iE7kCDxCnPnPZa0nWoHDk4yd50RlzznkPna74r
+Xbo9FdNeLNmER/7GGdQARkpd52Uur08fIJW2wyS1bdgbBgw/G+puFAR8z7ipgj4W
+p9LoYqiuxaEbiD5zUzeOtKAKL/nfmzK82zbdPxMrv7TvHUSSWEUC4O9QKiB3amgf
+yWMjw3otH+ZLnBmy/fS6IVQ5OnV6rVhQ7+LRKe+qlYidzfp19lIL8UidbsBfWAzB
+9Xk0sH5c1NQT6spo/nQM3UNIkkn+a7zKPJmetHsO4Ob3xKLiSpw5f35SRV+rF+mO
+vIUE1/YssXMO7TK6iBIXCuuOUtOpGiLxNVRIaJvbGmazLWCSyptk5fJhPLkhuK+J
+YoZn9FNAuRiYFL3rw+6qol+KoqzoPJJek6WHRy8OSE+8Dz1ysTLIPB6tGKn7EWnP
+-----END RSA PRIVATE KEY-----
+```
+Está cifrada, para descifrarla y poder usarla tenemos que hashearla con ssh2john, un script en python que podéis clonaros de aquí 
+
+```
+git clone https://github.com/openwall/john.git
+```
+Arrancamos el script
+```
+python ssh2john.py id_rsa > idrsa.hash
+```
+Y ya obtenemos el hash, solo falta sacar su contraseña, para esto usaremos john para fuzzear la contraseña através del famoso diccionario rockyou.txt, podemos usar cualquier diccionario yo uso este porque me resulta más cómodo. 
+```
+john --wordlist=/usr/share/wordlists/rockyou.txt idrsa.hash 
+
+
+Using default input encoding: UTF-8
+Loaded 1 password hash (SSH [RSA/DSA/EC/OPENSSH (SSH private keys) 32/64])
+Cost 1 (KDF/cipher [0=MD5/AES 1=MD5/3DES 2=Bcrypt/AES]) is 0 for all loaded hashes
+Cost 2 (iteration count) is 1 for all loaded hashes
+Will run 16 OpenMP threads
+Note: This format may emit false positives, so it will keep trying even after
+finding a possible candidate.
+Press 'q' or Ctrl-C to abort, almost any other key for status
+superpassword    (id_rsa)
+1g 0:00:00:02 DONE (2022-06-23 03:05) 0.4149g/s 5950Kp/s 5950Kc/s 5950KC/s  0 0 0..*7¡Vamos!
+Session completed
+```
+Podemos ver que la contraseña que encuentra es **superpassword** así que solo queda la parte de conectarse a la máquina y obtener las flags.
 
 ## Escalada de privilegios 
+
+Una vez con toda la información en nuestro poder, el usuario Takis y la id_rsa con su contraseña, podemos entrar en la máquina por ssh, ya que tenemos el puerto 22 abierto, de la siguiente manera.
+```
+ssh -i "id_rsa" Takis@10.10.10.10
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for 'id_rsa' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "id_rsa": bad permissions
+Takis@10.10.10.10's password: superpassword
+```
 ## Video

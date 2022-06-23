@@ -3,4 +3,4 @@ title: Sobre mí
 layout: page
 ---
 
-Bienvenido a mi blog de hacking ético.
+Bienvenidos a mi blog de hacking ético.

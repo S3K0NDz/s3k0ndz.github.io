@@ -111,13 +111,13 @@ Ahora con gobuster aplicaré fuzzing con el diccionario nombrado anteriormente p
 
 Me llama la atención el plugin job manager, se usa en la siguiente parte de la página para enviar CV. 
 
-foto tenten3 -------------------
+<img src="http://drive.google.com/uc?export=view&id=133ZhxD1VizC2bkHGch9DumQ6sSCH9rTa">
 
+Mirando la página me llama la atención un apartado llamado **Jobs Listing**, una vez entramos dentro vemos que tiene un formulario que nos permite enviar un CV y en la parte inferior no deja subir un fichero, probñe a subir un php malicioso para hacer una reverse shell pero no funcionó, por lo que decidí subir un currículum de prueba que si aceptó, esto servirá para listar contenido mas adelante.
 
-, y buscando vulneravilidades por google me he topado con la siguiente. 
+<img src="http://drive.google.com/uc?export=view&id=1PYwJMaungE3VY1L9Cui26JI35ABzW6KQ">
 
-foto tenten2 ---------------
-
+<img src="http://drive.google.com/uc?export=view&id=17Qw4U5AxeepD6FiZ8hbwIS5C7HVTYjZ0">
 
 
 ## Escalada de privilegios 

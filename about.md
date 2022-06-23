@@ -1,5 +1,5 @@
 ---
-title: About
+title: Sobre mí
 layout: page
 ---
 

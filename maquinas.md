@@ -1,5 +1,5 @@
 ---
-title: Maquinas
+title: Máquinas
 layout: maquinas
 ---
 

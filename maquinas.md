@@ -1,6 +1,5 @@
 ---
 title: Maquinas
-layout: home
+layout: maquinas
 ---
 
-Bienvenidos a mi blog de hacking ético.

@@ -6,7 +6,7 @@ layout: default
 
   {{ content }}
 
-  {% assign posts = site.posts %}
+  {% assign posts = site.postsmaquinas %}
 
 
   {%- if posts.size > 0 -%}
@@ -15,7 +15,7 @@ layout: default
     {%- endif -%}
     <div class="box home-box">
       <div class="post-list">
-        {%- for post in postsmaquinas -%}
+        {%- for post in posts -%}
           <a class="post-link" href="{{ post.url | relative_url }}">
             <h3>{{ post.title | escape }}</h3>
           </a>

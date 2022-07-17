@@ -3,34 +3,5 @@ layout: default
 ---
 
 <div class="maquinas">
-
-  {{ content }}
-
-  {% assign posts = site.maquinas %}
-
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <div class="box maquinas-box">
-      <div class="post-list">
-        {%- for post in postsmaquinas -%}
-          <a class="post-link" href="{{ post.url | relative_url }}">  
-              <h3>{{ post.title }}</h3>
-              <div>
-                  <img src="{{ post.image }}" style="height: auto; width: auto; max-height: 100px; max-width: 100px; float: right; border-radius: 15%;">
-              </div>
-              <br>
-              <br>
-              <h4>{{ post.description }}</h4>
-              <br>
-              <br>
-          </a>
-        {%- endfor -%}
-      </div>
-    </div>
-
-  {%- endif -%}
-
+<p>holaaaa</p>
 </div>

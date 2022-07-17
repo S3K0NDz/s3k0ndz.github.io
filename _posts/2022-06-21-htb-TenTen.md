@@ -4,6 +4,7 @@ author: S3K0NDZ
 title: Máquina TenTen
 image: https://www.hackthebox.com/storage/avatars/e58a465e93364c423cd2162945f8f7bf.png
 description: Resolución de máquina
+tipo: maquina
 ---
 <img style="display: block;
   margin-left: auto;

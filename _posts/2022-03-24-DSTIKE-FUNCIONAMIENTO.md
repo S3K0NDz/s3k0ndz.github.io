@@ -4,6 +4,7 @@ author: S3K0NDZ
 title: Uso y review del reloj DSTIKE DEAUTHER mini
 image: http://drive.google.com/uc?export=view&id=14TWYjX1aQS1nNS8sGw9VC-U6oAqaHcQP
 description: Review hardware hacking
+tipo: hardware
 ---
 Considero que no hay una forma mas interesante de estrenar este rincóncito que tengo en internet, que compartir el funcionamiento de uno de los cacharritos
 que mas me han llamado la ateción desde que me metí en el mundo del hacking, estoy hablando del reloj DSTIKE, un dispositivo portatil con forma de reloj que te 

@@ -6,7 +6,7 @@ layout: default
 
   {{ content }}
 
-  {% assign posts = site.postsmaquinas %}
+  {% assign posts = site.posts %}
 
 
   {%- if posts.size > 0 -%}
@@ -16,9 +16,11 @@ layout: default
     <div class="box home-box">
       <div class="post-list">
         {%- for post in posts -%}
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            <h3>{{ post.title | escape }}</h3>
-          </a>
+          {%- if post.tipo == "maquina" -%}
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              <h3>{{ post.title | escape }}</h3>
+            </a>
+          {%- endif -%}
         {%- endfor -%}
       </div>
     </div>

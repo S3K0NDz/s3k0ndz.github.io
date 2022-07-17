@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home">
+<div class="maquinas">
 
   {{ content }}
 
@@ -13,7 +13,7 @@ layout: default
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
-    <div class="box home-box">
+    <div class="box maquinas-box">
       <div class="post-list">
         {%- for post in postsmachines -%}
           <a class="post-link" href="{{ post.url | relative_url }}">  

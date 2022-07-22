@@ -12,7 +12,7 @@ permite hacer varios tipos de ataques jugando con la redes wifi de 2.4 GHz.
 
 Este es el dispositivo en cuestión: 
 
-<img src="https://ae01.alicdn.com/kf/H79491ed834ec4bed901e4931f7a6bfdbQ.jpg">
+<img src="http://drive.google.com/uc?export=view&id=14TWYjX1aQS1nNS8sGw9VC-U6oAqaHcQP">
 
 El reloj funciona sobre un micro **ESP8266** con módulo wifi 2.4 GHz incorporado.
 

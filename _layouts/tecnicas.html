@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {{ content }}
+
+  {% assign posts = site.posts %}
+
+
+  {%- if posts.size > 0 -%}
+    {%- if page.list_title -%}
+      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <div class="box home-box">
+      <div class="post-list">
+        {%- for post in posts -%}
+          {%- if post.tipo == "tecnicas" -%}
+              <a class="post-link" href="{{ post.url | relative_url }}">  
+                <h3>{{ post.title }}</h3>
+                <div>
+                    <img src="{{ post.image }}" style="height: auto; width: auto; max-height: 100px; max-width: 100px; float: right; border-radius: 15%;">
+                </div>
+                <br>
+                <br>
+                <h4>{{ post.description }}</h4>
+                <br>
+                <br>
+              </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+  {%- endif -%}
+
+</div>

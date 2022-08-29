@@ -1,0 +1,5 @@
+---
+title: Tecnicas
+layout: tecnicas
+---
+

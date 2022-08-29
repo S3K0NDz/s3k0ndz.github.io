@@ -1,5 +1,5 @@
 ---
-title: Tecnicas
+title: Técnicas
 layout: tecnicas
 ---
 

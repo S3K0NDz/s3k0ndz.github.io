@@ -2,7 +2,7 @@
 layout: post
 author: S3K0NDZ
 title: Ataque Deauth
-image: hhttps://openailabsprodscus.blob.core.windows.net/private/user-RJ092ajqZTaCrueBXYR9jJ3T/generations/generation-fqWHu0DC4lb7pSMch7jrfyMl/image.webp?st=2022-08-29T21%3A48%3A29Z&se=2022-08-29T23%3A46%3A29Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/webp&skoid=15f0b47b-a152-4599-9e98-9cb4a58269f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-08-29T22%3A25%3A22Z&ske=2022-09-05T22%3A25%3A22Z&sks=b&skv=2021-08-06&sig=GQbdIUT%2B53Av9fMb0tVQ/E%2BgfKZRFr8LSaVGSLwiCfQ%3D
+image: https://e7.pngegg.com/pngimages/174/549/png-clipart-computer-icons-hand-tool-hand-tool-angle-white.png
 description: Como realizar un ataque de desautenticación.
 tipo: tecnicas
 ---

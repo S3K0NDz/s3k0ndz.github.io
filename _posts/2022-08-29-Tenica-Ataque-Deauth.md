@@ -2,7 +2,7 @@
 layout: post
 author: S3K0NDZ
 title: Ataque Deauth
-image: https://e7.pngegg.com/pngimages/174/549/png-clipart-computer-icons-hand-tool-hand-tool-angle-white.png
+image: http://drive.google.com/uc?export=view&id=1X2HuSZu3FkNzNnfY9gB1dsOkrtK2Ryli
 description: Como realizar un ataque de desautenticación.
 tipo: tecnicas
 ---
